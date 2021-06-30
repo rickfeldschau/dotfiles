@@ -46,7 +46,7 @@ fi
 
 if [ -f "$HOME/$KEY_FILENAME" ]; then
   SSH_KEY_LOCATION='$HOME/$KEY_FILENAME'
-elif [ $CLOUD_SHELL = "true" ]; then
+elif [ "$CLOUD_SHELL" = "true" ]; then
   SSH_KEY_LOCATION='$HOME/$KEY_FILENAME'
 elif [ ! -z $SOMMELIER_VERSION ]; then
   SSH_KEY_LOCATION='/mnt/chromeos/MyFiles/Downloads/$KEY_FILENAME'
