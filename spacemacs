@@ -286,7 +286,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil then the last auto saved layouts are resumed automatically upon
    ;; start. (default nil)
-   dotspacemacs-auto-resume-layouts nil
+   dotspacemacs-auto-resume-layouts t
 
    ;; If non-nil, auto-generate layout name when creating new layouts. Only has
    ;; effect when using the "jump to layout by number" commands. (default nil)
@@ -545,7 +545,9 @@ before packages are loaded."
   ;;Exit insert mode by pressing j and then j quickly
   (setq key-chord-two-keys-delay 0.5)
   (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
-  (key-chord-mode 1))
+  (key-chord-mode 1)
+  (setq org-blank-before-new-entry '((heading . Never) (plain-list-item . auto)))
+  )
 
 
 ;; Do not write anything past this comment. This is where Emacs will
